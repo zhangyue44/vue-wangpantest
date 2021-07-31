@@ -3,7 +3,8 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const Login = () => import('@/pages/login/login')
+const Login = () => import('@/pages/login/login');
+const Plate = () => import('@/pages/plate/plate.vue');
 
 const routes = [
   {
@@ -13,6 +14,13 @@ const routes = [
   {
     path: '/login',
     component: Login
+  },
+  {
+    path: '/plate/:user', // 登录成功后进入的首页
+    component: Plate,
+    meta: {
+      isToken: true,
+    }
   }
 ]
 
@@ -20,6 +28,13 @@ const router = new VueRouter({
   mode: 'history',
   // base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (!localStorage.getItem('token') && to.meta.isToken === true) {
+    router.push('/login')
+  }
+  next();
 })
 
 export default router

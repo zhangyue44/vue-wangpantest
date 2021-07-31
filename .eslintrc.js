@@ -34,6 +34,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'default-case': 'off',
     'arrow-body-style': 'off',
-    'no-shadow': 'off'
+    'no-shadow': 'off',
+    'prefer-template': 'off'
   },
 };

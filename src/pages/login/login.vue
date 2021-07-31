@@ -42,7 +42,7 @@ export default {
           { required: true, message: '请输入用户名密码', trigger: 'blur' }
         ]
       }
-      };
+    };
   },
   methods: {
     submitLoginForm(formName) {
@@ -55,7 +55,8 @@ export default {
           }
           loginUser(params).then(res => {
             this.msg = res.msg;
-            console.log(res);
+            localStorage.setItem('token', res.token)
+            this.$router.push('/plate/' + res.name)
           })
         } else {
           return false;
