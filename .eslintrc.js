@@ -35,6 +35,7 @@ module.exports = {
     'default-case': 'off',
     'arrow-body-style': 'off',
     'no-shadow': 'off',
-    'prefer-template': 'off'
+    'prefer-template': 'off',
+    'import/first': 'off'
   },
 };

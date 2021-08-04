@@ -1,8 +1,8 @@
 import { request } from './request'
 
-export function testUser(opts) {
+export function testUser() {
   return request({
-    method: 'post',
-    url: '/user/plate' + opts,
+    method: 'get',
+    url: '/user/username'
   })
 }

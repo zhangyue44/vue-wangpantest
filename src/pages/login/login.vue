@@ -56,7 +56,7 @@ export default {
           loginUser(params).then(res => {
             this.msg = res.msg;
             localStorage.setItem('token', res.token)
-            this.$router.push('/plate/' + res.name)
+            this.$router.push('/plate')
           })
         } else {
           return false;
@@ -73,7 +73,6 @@ export default {
           }
           registerUser(params).then(res => {
             this.msg = res.msg;
-            console.log(res.msg);
           })
         } else {
           return false;
@@ -83,7 +82,7 @@ export default {
     resetForm(formName) {
       this.$refs[formName].resetFields();
     }
-  }
+  },
 }
 </script>
 

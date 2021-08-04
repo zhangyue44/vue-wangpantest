@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 import App from './App.vue'
 Vue.use(ElementUI);
+import './assets/css/base.css'
 
 new Vue({
   router,

@@ -16,7 +16,7 @@ const routes = [
     component: Login
   },
   {
-    path: '/plate/:user', // 登录成功后进入的首页
+    path: '/plate', // 登录成功后进入的首页
     component: Plate,
     meta: {
       isToken: true,
