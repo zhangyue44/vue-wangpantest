@@ -32,7 +32,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   if (!localStorage.getItem('token') && to.meta.isToken === true) {
-    router.push('/login')
+    router.push('/login')  // return next('/login')
   }
   next();
 })
