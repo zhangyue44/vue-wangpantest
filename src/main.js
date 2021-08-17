@@ -9,6 +9,7 @@ import './assets/css/base.css'
 
 console.log(4444444);
 console.log(555555);
+console.log(6666);
 
 new Vue({
   router,
