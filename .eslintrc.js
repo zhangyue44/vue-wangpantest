@@ -36,6 +36,7 @@ module.exports = {
     'arrow-body-style': 'off',
     'no-shadow': 'off',
     'prefer-template': 'off',
-    'import/first': 'off'
+    'import/first': 'off',
+    'no-multi-spaces': 'off',
   },
 };
