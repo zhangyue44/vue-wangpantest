@@ -7,9 +7,6 @@ import App from './App.vue'
 Vue.use(ElementUI);
 import './assets/css/base.css'
 
-console.log(4444444);
-console.log(555555);
-
 new Vue({
   router,
   store,
