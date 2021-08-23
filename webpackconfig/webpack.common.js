@@ -80,6 +80,14 @@ const commonConfig = {
         }
       },
       {
+        test: /\.(js|vue)$/,
+        include: resolveApp('./src'),
+        use: [
+          'eslint-loader',
+        ],
+        enforce: 'pre' // 保证编译前执行
+      },
+      {
         test: /\.js$/,
         include: resolveApp('./src'),
         // exclude: /node_modules/,

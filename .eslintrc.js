@@ -38,5 +38,9 @@ module.exports = {
     'prefer-template': 'off',
     'import/first': 'off',
     'no-multi-spaces': 'off',
+    'max-len': 'off',
+    'import/extensions': 'off',
+    'object-curly-newline': 'off',
+    'consistent-return': 'off',
   },
 };

@@ -16,10 +16,10 @@
 </template>
 
 <script>
+import { testUser } from '@/network/plate.js'
 import Header from './header.vue'
 import Aside from './aside.vue'
 import Main from './main.vue'
-import { testUser } from '@/network/plate.js'
 
 export default {
   data() {

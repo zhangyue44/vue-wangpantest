@@ -11,7 +11,7 @@
 export default {
   data() {
     return {
-      breadcrumbList: ["首页", "活动管理", "活动列表", "活动详情"],
+      breadcrumbList: ['首页', '活动管理', '活动列表', '活动详情'],
     }
   },
   methods: {
