@@ -4,9 +4,12 @@ const { HotModuleReplacementPlugin } = require('webpack');
 module.exports = {
   mode: "development",
   devServer: {
+    useLocalIp: true,
     hot: true,
+    host: '0.0.0.0',
     compress: true,
     open: true,
+    port: 7778,  // 端口号
     proxy: {
       "/pan": {
         target: "http://192.168.31.119:8002",
