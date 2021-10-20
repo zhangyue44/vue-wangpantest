@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     menuSelect(index, indexPath) {
-      console.log(index, indexPath);
+      console.log(index, indexPath);  // 2 ["2"]
     },
   }
 }

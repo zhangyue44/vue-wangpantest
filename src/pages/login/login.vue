@@ -59,8 +59,10 @@ export default {
           }
           loginUser(params).then(res => {
             this.msg = res.msg;
-            localStorage.setItem('token', res.token)
-            this.$router.push('/plate')
+            if (res.msg !== '用户名或密码错误~') {
+              localStorage.setItem('token', res.token)
+              this.$router.push('/plate')
+            }
           })
         } else {
           return false;
