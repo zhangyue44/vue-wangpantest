@@ -3,11 +3,13 @@ const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
   mode: "development",
+  devtool: "cheap-module-source-map",
+  devtool: "cheap-module-source-map",
   devServer: {
-    useLocalIp: true,
+    useLocalIp: true, // host设置为0.0.0.0时，局部网可以访问，本机又不可以访问本机自己开启的项目,将useLocalIp设置为true就可以访问了
     hot: true,
     host: '0.0.0.0',
-    compress: true,
+    compress: false, // 是否为静态文件开启gzip compression，默认值是false
     open: true,
     port: 7778,  // 端口号
     proxy: {
@@ -17,7 +19,7 @@ module.exports = {
         pathRewrite: {
           "^/pan": ""
         },
-        secure: false,
+        secure: false, // 不验证证书，可以接收转发到https的服务器上
         changeOrigin: true
       }
     },

@@ -96,10 +96,10 @@ export default {
       }
     },
     // 文件上传
-   /**
+    /**
     * 1. 将文件转化为 formdata 格式
     * 2. 接口请求头部改为 multipart/form-data
-  **/
+    * */
     clickUpload() {
       this.isUploadShow = true;
     },
