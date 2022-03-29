@@ -35,7 +35,6 @@ const commonConfig = (isProduction) => {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             filename: "js/[id]_vendors.js",
-            // name: "vendor-chunks.js",
             priority: -10
           },
           default: {

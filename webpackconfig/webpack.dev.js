@@ -1,9 +1,7 @@
-const resolveApp = require("./paths");
 const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
   mode: "development",
-  devtool: "cheap-module-source-map",
   devtool: "cheap-module-source-map",
   devServer: {
     useLocalIp: true, // host设置为0.0.0.0时，局部网可以访问，本机又不可以访问本机自己开启的项目,将useLocalIp设置为true就可以访问了
