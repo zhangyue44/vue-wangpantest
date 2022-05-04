@@ -12,7 +12,7 @@ module.exports = {
     port: 7778,  // 端口号
     proxy: {
       "/pan": {
-        target: "http://192.168.31.119:8002",
+        target: "http://192.168.31.117:8002",
         // target: "http://localhost:8002", // 自己笔记本的ip总是经常变，所以也可以直接用 localhost
         pathRewrite: {
           "^/pan": ""

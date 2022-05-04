@@ -3,7 +3,7 @@
     <div class="toolBox">
       <el-button type="danger" size="medium" @click="toggleSelection"><i class="el-icon-plus"></i>新建</el-button>
       <el-button type="danger" size="medium" @click="clickUpload"><i class="el-icon-upload"></i>上传</el-button>
-      <el-button type="danger" size="medium"><i class="el-icon-share"></i>分享</el-button>
+      <el-button type="danger" size="medium" @click="getShare"><i class="el-icon-share"></i>分享</el-button>
     </div>
     <div class="bread">
       <el-breadcrumb v-for="(item, index) in breadcrumbList" :key="index" separator-class="el-icon-arrow-right">
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { uploadfile } from '@/network/plate.js'
+import { uploadfile, getfile } from '@/network/plate.js'
 
 export default {
   data() {
@@ -114,6 +114,23 @@ export default {
       uploadfile(formData).then(res => {
         console.log('res', res);
       }).catch(err => { console.log(err) })
+    },
+    getShare() {
+      const name = 'react.md';
+      getfile({ name }).then(res => {
+        const reader = new FileReader();
+        reader.readAsDataURL(res);
+        reader.onload = () => {
+          console.log(reader.result);
+          const a = document.createElement('a')
+          a.href = reader.result
+          a.download = name
+          a.click()
+        }
+        reader.onerror = (e) => {
+          console.log('Error', e);
+        };
+      })
     }
   }
 }
